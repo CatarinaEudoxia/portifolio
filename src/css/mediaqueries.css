@@ -39,7 +39,7 @@
     }
 
     .about-info .container-img {
-        width: 40%;
+        width: 65%;
     }
 
     .about-info .container-my-information {
@@ -330,6 +330,10 @@
 
     .skills-info .container-skills {
         padding: 15px;
+    }
+
+    .skills-info .container-skills ul {
+        gap: 90px;
     }
 
     .skills-info .container-skills li {
