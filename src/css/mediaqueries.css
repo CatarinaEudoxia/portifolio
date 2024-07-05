@@ -18,7 +18,7 @@
         padding: 8px;
     }
 
-    .home .start h2{
+    .home .start h2 {
         font-size: 32px;
     }
 
@@ -28,7 +28,7 @@
 
     /* ---------------------- SEÇÃO ABOUT ME ---------------------- */
 
-    .about-info{
+    .about-info {
         min-height: 100vh;
         width: 100%;
     }
@@ -51,7 +51,7 @@
     /* ---------------------- SEÇÃO HABILIDADES ---------------------- */
 
     .skills-info {
-        min-height: 100vh; 
+        min-height: 100vh;
     }
 
     .skills-info .container-skills {
@@ -77,9 +77,14 @@
         transition: 0.3s;
     }
 
-    /* ---------------------- SEÇÃO PROJETOS ---------------------- */ 
+    /* ---------------------- SEÇÃO PROJETOS ---------------------- */
 
-    .projects-info .container-projects .carousel .projects-cards {
+    .projects-info .carousel .projects-cards {
+        width: 600px;
+        height: 350px;
+    }
+
+    .projects-info .carousel .projects-cards .about-my-project {
         width: 600px;
         height: 350px;
     }
@@ -92,15 +97,67 @@
         width: 100vw;
     }
 
-    .page-header .menu {
-        gap: 30px;
-        width: fit-content;
-        flex-wrap: wrap;
-        justify-content: flex-start;
+    .menu a {
+        display: none;
     }
-    
-    .page-header .menu a {
-        font-size: 14px;
+
+    .menu-icon {
+        display: block;
+        font-family: 80px;
+        z-index: 1100;
+    }
+
+    .menu-icon img {
+        width: 40px;
+        padding: 5px;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .sidebar.active {
+        display: flex;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--background-color-5);
+        justify-content: center;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+    }
+
+    .sidebar ul li {
+        margin: 40px 0;
+        /* Espaçamento entre os itens da lista */
+    }
+
+    .sidebar ul li img {
+        margin: 70px 0px;
+    }
+
+    .sidebar ul li a {
+        display: flex;
+        color: white;
+        text-decoration: none;
+        font-size: 32px;
+        justify-content: center;
+    }
+
+    .sidebar ul li a:hover {
+        color: #5ac9e8;
+    }
+
+    .sidebar ul li a span {
+        color: var(--primary-color);
+        margin: 0 15px;
     }
 
     /* ------------------------------- SEÇÃO INICIAL -------------------------------- */
@@ -117,22 +174,23 @@
     .home .start h3 {
         font-size: 27px;
     }
+
     .home .start h1 {
         font-size: 40px;
         color: var(--primary-color);
     }
-    
-    .home .start h1 span{
+
+    .home .start h1 span {
         font-size: 40px;
         color: var(--primary-color);
     }
-    
+
     .home .start h2 {
         text-align: center;
         font-size: 33px;
     }
-    
-    .home .start h2 span{
+
+    .home .start h2 span {
         font-size: 33px;
         color: var(--primary-color);
     }
@@ -146,7 +204,17 @@
     .about-info {
         min-height: 100vh;
         width: 100vw;
-    }  
+    }
+
+    .about-info .container-about-me-info {
+        gap: 50px;
+    }
+
+    .about-info .container-my-information {
+        font-size: 18px;
+        align-items: center;
+        letter-spacing: 3px;
+    }
 
     /* ---------------------- SEÇÃO HABILIDADES ---------------------- */
 
@@ -156,41 +224,49 @@
     }
 
     .skills-info .container-skills li {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
     }
 
     .skills-info .container-skills {
         height: fit-content;
+        width: 100%;
     }
 
-    /* ---------------------- SEÇÃO PROJETOS ---------------------- */ 
+    /* ---------------------- SEÇÃO PROJETOS ---------------------- */
 
-    .projects-info{
+    .projects-info {
         min-height: 100vh;
         width: 100vw;
     }
 
-    .projects-info .container-projects .carousel .projects-cards {
+    .projects-info .carousel .projects-cards {
         width: 500px;
         height: 270px;
     }
+
+    .projects-info .carousel .projects-cards .about-my-project {
+        width: 500px;
+        height: 270px;
+    }
+
 }
 
-@media (max-width: 478px){
+@media (max-width: 478px) {
 
     .home .start h3 {
         font-size: 26px;
     }
+
     .home .start h1 {
         font-size: 28px;
     }
-    
+
     .home .start h2 {
         font-size: 26px;
     }
-    
-    .home .start h2 span{
+
+    .home .start h2 span {
         font-size: 26px;
     }
 
@@ -212,15 +288,16 @@
     .home .start h3 {
         font-size: 26px;
     }
+
     .home .start h1 {
         font-size: 28px;
     }
-    
+
     .home .start h2 {
         font-size: 26px;
     }
-    
-    .home .start h2 span{
+
+    .home .start h2 span {
         font-size: 26px;
     }
 
@@ -229,7 +306,7 @@
     .about-info {
         min-height: 100vh;
         width: 100vw;
-    } 
+    }
 
     .about-info .titulo {
         font-size: 28px;
@@ -250,14 +327,25 @@
         font-size: 28px;
     }
 
-    .skills-info .container-skills li {
-        width: 70px;
-        height: 70px;
+    .skills-info .container-skills {
+        padding: 15px;
     }
 
-    /* ---------------------- SEÇÃO PROJETOS ---------------------- */ 
+    .skills-info .container-skills li {
+        width: 60px;
+        height: 60px;
+        padding: 0;
+        justify-content: space-evenly;
+        height: fit-content;
+    }
 
-    .projects-info{
+    .skills-info .container-skills p {
+        font-size: 16px;
+    }
+
+    /* ---------------------- SEÇÃO PROJETOS ---------------------- */
+
+    .projects-info {
         min-height: 100vh;
         width: 100vw;
     }
@@ -265,36 +353,65 @@
     .projects-info .titulo {
         font-size: 28px;
     }
-    
+
+    .projects-info .carousel .projects-cards {
+        width: 400px;
+        height: 170px;
+    }
+
+    .projects-info .carousel .projects-cards .about-my-project {
+        width: 400px;
+        height: 170px;
+    }
+
+    .projects-info .carousel .projects-cards .about-my-project h3 {
+        font-size: 18px;
+    }
+
+    .btn-link {
+        width: 120px;
+        /* Definir largura fixa para os botões */
+    }
+
+    .about-my-project .btn-link {
+        font-size: 14px;
+    }
+
+    /* ------------------------------- RODAPÉ -------------------------------- */
+
+    footer {
+        font-size: 14px;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 @media (max-width: 250px) {
-        /* ------------------------------- SEÇÃO INICIAL -------------------------------- */
+    /* ------------------------------- SEÇÃO INICIAL -------------------------------- */
 
-        .home {
-            min-height: calc(100vh - 70px);
-            width: 100vw;
-        }
-    
-    
-        /* ---------------------- SEÇÃO ABOUT ME ---------------------- */
-    
-        .about-info {
-            min-height: 100vh;
-            width: 100vw;
-        } 
-    
-        /* ---------------------- SEÇÃO HABILIDADES ---------------------- */
-    
-        .skills-info {
-            min-height: 100vh;
-            width: 100vw;
-        }
-    
-        /* ---------------------- SEÇÃO PROJETOS ---------------------- */ 
-    
-        .projects-info{
-            min-height: 100vh; 
-            width: 100vw;
-        }
+    .home {
+        min-height: calc(100vh - 70px);
+        width: 100vw;
+    }
+
+    /* ---------------------- SEÇÃO ABOUT ME ---------------------- */
+
+    .about-info {
+        min-height: 100vh;
+        width: 100vw;
+    }
+
+    /* ---------------------- SEÇÃO HABILIDADES ---------------------- */
+
+    .skills-info {
+        min-height: 100vh;
+        width: 100vw;
+    }
+
+    /* ---------------------- SEÇÃO PROJETOS ---------------------- */
+
+    .projects-info {
+        min-height: 100vh;
+        width: 100vw;
+    }
 }
